@@ -100,5 +100,14 @@ shinyServer(function(input, output, session) {
             plot_reactive()
       })
       
+      output$downloadData <- downloadHandler(
+            filename = function() { 
+                  paste('perfectND', '.csv', sep='') 
+            },
+            content = function(file) {
+                  write_csv(data_request(), file)
+            }
+      )
+      
 })
 
