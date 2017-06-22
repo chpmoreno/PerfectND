@@ -10,7 +10,7 @@ ui <- fluidPage(
                                                       "Humidity" = "hum",
                                                       "Pression" = "press")
                                        ),
-                                       tags$iframe(width="250", height="200", src="//www.youtube.com/embed/j8Y2zAj9moY?autoplay=1",
+                                       tags$iframe(width="250", height="200", src="//www.youtube.com/embed/pikXS9r0WRI?autoplay=1",
                                                    frameborder="0", allowfullscreen="true")
                                        ),
                                 column(width = 9,
