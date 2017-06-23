@@ -4,7 +4,7 @@ ui <- fluidPage(
                  tabPanel(title = "Web app",
                           fluidRow(
                                 column(width = 3,
-                                       conditionalPanel(condition="input.conditionedPanels == 'Potential risks'",
+                                       conditionalPanel(condition="input.conditionedPanels == 'Monitor'",
                                                         radioButtons("variable", "Variable:",
                                                                      c("Temperature-Humidity" = "temp_hum",
                                                                        "Temperature-Pression" = "temp_press",
@@ -16,7 +16,11 @@ ui <- fluidPage(
                                        ),
                                        tags$br(),
                                        tags$iframe(width="250", height="200", src="//www.youtube.com/embed/pikXS9r0WRI?autoplay=1",
-                                                   frameborder="0", allowfullscreen="true")
+                                                   frameborder="0", allowfullscreen="true"),
+                                       tags$br(),
+                                       a(img(src = "github-mark.png", width="80", height="50", alt = "US CDC"),
+                                         href = "https://github.com/chpmoreno/PerfectND",
+                                         target = "_blank")
                                        ),
                                 column(width = 9,
                                        tabsetPanel(
@@ -26,7 +30,7 @@ ui <- fluidPage(
                                                                   view="FitH")
                                                       
                                              ),
-                                             tabPanel("Potential risks",
+                                             tabPanel("Monitor",
                                                       fluidRow(
                                                             column(width = 2.2,
                                                                    valueBoxOutput("min")
